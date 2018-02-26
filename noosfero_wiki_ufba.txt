@@ -1,0 +1,24 @@
+WIKI STI UFBA NOOSFERO
+
+https://wiki-sti.ufba.br/CRI/DES-CRI-083
+https://wiki-sti.ufba.br/CRI/InstalacaoNoosferoDev
+https://wiki-sti.ufba.br/CRI/AreaNoosferoInfra
+https://wiki-sti.ufba.br/CRI/CustomizacaoNoosfero
+
+
+admin = User.new({:login => "root", :email => 'root@root.com', :password => 'toor', :password_confirmation => 'toor', :environment => env})
+
+admin = User.new({:login => "root", :email => 'root@root.com', :password => 'toor', :password_confirmation => 'toor'})
+
+
+Environment.default.add_admin(admin.person)
+
+
+
+
+administrator = User.new({:login => "admin", :email => 'admin@root.com', :password => 'admin', :password_confirmation => 'admin'})
+
+
+
+
+admin = User.new({:login => "roots", :email => 'email@provedor.com', :password => 'root', :password_confirmation => 'root'})

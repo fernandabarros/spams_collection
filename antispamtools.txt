@@ -1,0 +1,91 @@
+Raskimet:
+https://github.com/joshfrench/rakismet
+
+Ruby on Rails Security Guide:
+http://guides.rubyonrails.org/security.html
+
+gem invisible_captcha:
+https://github.com/markets/invisible_captcha
+
+Previnindo SPAM em Formulários em Rails utilizando invisible_captcha:
+http://blog.algorich.com.br/2014/09/12/previnindo-spam-em-formularios-rails-utilizando-invisible-captcha/
+
+gem honeypot-captcha:
+https://github.com/curtis/honeypot-captcha
+
+Simple Detection of Comment Spam in Rails:
+http://blog.gingerlime.com/2012/simple-detection-of-comment-spam-in-rails/
+
+Noosfero Developers Site - Spaminator Plugin
+http://noosfero.org/bin/view/Development/SpaminatorPlugin
+"There are still many rules missing on this plugin to help finding spams and spammers, but these are the rules already implemented:
+If some plugin (like TypePad Antispam plugin) believes the comment is a spam, it is marked as spam;
+When a person has more than two comments marked as spam, the person is disabled;
+When a profile is in the network for more than one month before the scanning, do not have any friends and is member of only one community, the profile is disabled;"
+
+Why Captcha Sucks and What to do About It:
+http://petewilliams.info/blog/2009/02/why-captcha-sucks-and-what-to-do-about-it/
+
+Honeypot Technique: Fast, Easy Spam Prevention
+https://solutionfactor.net/blog/2014/02/01/honeypot-technique-fast-easy-spam-prevention/
+
+Perguntas:
+1 - Já existe algum mecanismo de prospecção automática de spammers no Noosfero (sem ser o ambiente da UFBA)?
+2 - Como identificar usuários spammers?
+3 - O que fazer quando um spammer é identificado?
+4 - O tratamento de spammers será incorporado ao código fonte da aplicação ou ele deverá ser integrado em forma de plugin?
+5 - Considerando que já existe um plugin anti-spammer no repositório do noosfero (Spaminator) devemos tentar incorporá-lo no Noosfero UFBA ou buscar outra solução?
+
+Observações Noosfero UFBA:
+1 - Na criação de um novo usuário existe um reCAPTCHA com imagens
+2 - Não existe nenhuma verificação para postar no blog
+3 - A denúncia de usuário é feita sempre por "comportamento inadequado". Não é possível especificar que aquele usuário é um spammer.
+4 - Quando um usuário é denunciado, se um administrador aprovar a denúncia ele é excluído e não é possível criar outro usuário com aquele endereço de email nem com o mesmo nome de usuário.
+5 - Quando um novo usuário é criado, é preciso realizar a confirmação pelo email para poder começar a fazer postagens. - "Você não aparecerá como um usuário até sua conta ser confirmada."
+6 - Quando um usuário é excluído, porém sem ser através do modo denúncia, o usuário pode ser recriado com o mesmo nome e endereço de email. Não existe uma forma de excluir e denunciar o usuário ao mesmo tempo.
+
+
+
+Wiki STI UFBA Noosfero:
+https://wiki-sti.ufba.br/CRI/DES-CRI-083
+https://wiki-sti.ufba.br/CRI/InstalacaoNoosferoDev
+https://wiki-sti.ufba.br/CRI/AreaNoosferoInfra
+https://wiki-sti.ufba.br/CRI/CustomizacaoNoosfero
+Noosfero Development - http://noosfero.org/bin/view/Development/WebHome
+
+SpamAssassin
+http://konstati.com/help
+https://ubuntuforums.org/archive/index.php/t-398866.html
+https://github.com/codefriar/RubySpamAssassin
+
+
+
+Spamminator:
+http://noosfero.org/bin/view/Development/SpaminatorPlugin
+https://gitlab.com/noosfero/noosfero/tree/master/plugins/spaminator
+http://noosfero.org/bin/view/Development/AntiSpamMeasures#Anti_45Spam_Measures
+
+
+Plugins:
+
+
+
+Enable Spaminator:
+script/noosfero-plugins enable spaminator
+rake db:migrate
+Restarta o serv
+
+
+
+
+
+tailf /var/log/noosfero/production.log
+Rails.logger.debug "fhodgkpfgnf #{variavel}"
+vim config/environments/ufba_production.rb
+cd /usr/share/noosfero
+noosfero-console
+
+
+
+
+
